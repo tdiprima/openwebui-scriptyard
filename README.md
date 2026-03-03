@@ -26,7 +26,6 @@ This repo is my collection of scripts and tools for all of that — built from r
 | `SQLite/` | Inspect the database, list users, promote them to admin |
 | `Upload/` | Bulk-upload files to a knowledge collection with crash-resume |
 | `Query/` | Hit the Open WebUI API directly (Node.js example) |
-| `bmi512/` | Scripts from a specific server deployment — Caddy, LiteLLM, UFW, log extraction, update guide |
 
 ## Why It's Useful
 
