@@ -32,7 +32,7 @@ echo "🚀 Starting Open WebUI with OIDC..."
 
 docker stop open-webui
 docker rm open-webui
-docker rmi 1e27c358a5fe 
+docker rmi IMAGE
 
 docker run -d \
   -p 3000:8080 \
