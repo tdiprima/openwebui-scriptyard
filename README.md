@@ -18,8 +18,6 @@ Friday, May 30, 2025
 
 This repo is my collection of scripts and tools for all of that — built from real operational pain, not hypotheticals.
 
----
-
 ## What's Here
 
 | Folder | What it does |
@@ -30,8 +28,6 @@ This repo is my collection of scripts and tools for all of that — built from r
 | `Query/` | Hit the Open WebUI API directly (Node.js example) |
 | `bmi512/` | Scripts from a specific server deployment — Caddy, LiteLLM, UFW, log extraction, update guide |
 
----
-
 ## Why It's Useful
 
 - **Crash-resume uploads** — stop mid-run, restart, no duplicates
@@ -39,13 +35,9 @@ This repo is my collection of scripts and tools for all of that — built from r
 - **Deployment scripts** — repeatable, no guesswork
 - **Real-world configs** — not toy examples; used on actual infrastructure
 
----
-
 ## Tech Stack
 
 Python · Bash · JavaScript · Docker · SQLite · LiteLLM · Caddy
-
----
 
 ## License
 
