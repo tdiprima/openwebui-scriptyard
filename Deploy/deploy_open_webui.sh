@@ -8,5 +8,5 @@
 docker stop open-webui
 docker rm open-webui
 #docker volume rm open-webui
-docker rmi de5d58daf875 
+docker rmi IMAGE 
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
