@@ -2,8 +2,8 @@
 #
 # setup-open-webui.sh
 #
-# Installs Docker (if not already present) and deploys Open WebUI on
-# Rocky Linux, pointed at an existing Ollama instance.
+# Installs Docker (if not already present) and deploys Open WebUI
+# on Linux, pointed at an existing Ollama instance.
 #
 # Usage:
 #   sudo ./setup-open-webui.sh [OLLAMA_URL] [WEBUI_PORT]

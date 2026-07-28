@@ -11,7 +11,7 @@ upload_and_add_to_collection.py
 - Handles tens of thousands of files like a boss.
 
 HOW TO USE:
-1. Set your Open WebUI API token, collection (knowledge) ID, and the directory path with your files.
+1. Set environment variables OPENWEBUI_API_TOKEN, OPENWEBUI_KNOWLEDGE_ID, and OPENWEBUI_UPLOAD_DIR.
 2. Run the script. If it borks, run it again. It'll pick up where it left off.
 
 If you're reading this in the far future: yes, you really did upload 24,000+ files one by one, and you survived.
@@ -26,9 +26,9 @@ from pathlib import Path
 import requests
 
 # ========== CONFIG ==========
-token = "xxxxx.xxxxx.xxxxx"
-knowledge_id = "xxxxx"
-directory_path = "/path/to/your/content"
+token = os.environ.get("OPENWEBUI_API_TOKEN")
+knowledge_id = os.environ.get("OPENWEBUI_KNOWLEDGE_ID", "")
+directory_path = os.environ.get("OPENWEBUI_UPLOAD_DIR", "")
 uploaded_file_ids_path = "uploaded.txt"
 added_to_collection_path = "added_to_collection.txt"
 throttle_seconds = 1  # Pause between uploads (be kind to server!)
@@ -64,6 +64,10 @@ def save_progress(file_path, item):
 
 
 # === MAIN ===
+for var_name, var_val in [("OPENWEBUI_API_TOKEN", token), ("OPENWEBUI_KNOWLEDGE_ID", knowledge_id), ("OPENWEBUI_UPLOAD_DIR", directory_path)]:
+    if not var_val:
+        raise SystemExit(f"ERROR: Required environment variable {var_name} is not set.")
+
 if not Path(directory_path).is_dir():
     raise ValueError(f"The directory {directory_path} does not exist")
 
